@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big designer</title>
+    <link rel="stylesheet" href="site.css">
+    <link rel="icon" href="Ativo 2@3zz.png" type="image/x-icon" class="iconn">
+</head>
+
+<body>
+    <div class="particulas"></div>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contactos" class="menu-link">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="Logo app de roupas.jpg" alt="foto de Licon Abrão" class="foto-perfil">
+        <h1>Big designer</h1>
+        <h2>Licon Abrão Nhatave</h2>
+        <p class="cabecalho-sub-titulo">Master Designer</p>
+
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Sou Licon Abrão Nhatave, um designer focado em unir estética e tecnologia para criar soluções visuais de alto impacto. Com domínio da Adobe Creative Cloud e conhecimento intermediário em Figma, transito entre o design impresso e o digital com fluidez. Especialista em modelagem 3D com Blender, busco constantemente automatizar processos através de Python para elevar a eficiência criativa. Além disso, possuo domínio do Pacote Office, garantindo uma gestão de projetos organizada e profissional. Meu objetivo é transformar ideias complexas em experiências visuais memoráveis e funcionais.</p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+            <div class="projetos-card">
+                <img src="images.jpeg" alt="projeto-1" class="projeto-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">loja de Carro</h3>
+                    <p class="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione neque sunt vel
+                        aperiam minus maxime exercitationem ut pariatur, ipsum minima voluptas possimus ullam delectus
+                        amet
+                        qui soluta, deserunt quos velit!
+                    </p>
+                </div>
+            </div>
+            <div class="projetos-card">
+                <img src="222043477_7a543fec-dc03-4fa9-ba87-52720f248420.jpg" alt="projeto-2" class="projeto-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Site de Viajens</h3>
+                    <p class="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione neque sunt vel
+                        aperiam minus maxime exercitationem ut pariatur, ipsum minima voluptas possimus ullam delectus
+                        amet
+                        qui soluta, deserunt quos velit!
+                    </p>
+                </div>
+            </div>
+            <div class="projetos-card">
+                <img src="Sem título-4 [Recuperado].jpg" alt="projeto-3" class="projeto-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Microsoft</h3>
+                    <p class="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione neque sunt vel
+                        aperiam minus maxime exercitationem ut pariatur, ipsum minima voluptas possimus ullam delectus
+                        amet
+                        qui soluta, deserunt quos velit!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contactos" class="contactos">
+        <h2 class="contactos-titulo">Entre em contacto</h2>
+        
+        <form class="formalario-contactos" id="formulario" onsubmit="enviarwhats(event)" >
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="Nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="degite sua mensagem" rows="6" id="mensagem"></textarea>
+            </div>
+            <button type="submit" class="button-formulario">Enviar Whatsapp</button>
+        </form>
+
+    </section>
+    <script>
+
+        function enviarwhats(event) {
+            event.preventDefault()
+
+        const nome = document.getElementById('nome');
+        const mensagem = document.getElementById('mensagem');
+        const telefone = '258869841457'
+
+        const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+        const msgformatada = encodeURIComponent(texto)
+
+        const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${msgformatada}`
+
+        window.open(url, '_blank')
+
+        }
+    </script>
+
+</body>
+
+</html>
